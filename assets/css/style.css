@@ -507,17 +507,7 @@ main {
 
 .about-text p { margin-bottom: 15px; }
 
-.about .typing-container {
-    display: flex;
-    justify-content: center; /* Horizontally centers the content */
-    align-items: center; /* Vertically centers the content */
-}
-
-.about .typing-container img {
-    max-width: 100%;
-    height: auto;
-    left-margin: 80px; /* Adjust left and right margin as needed */
-}
+.typing-container { left-margin: 40px;}
 
 /**
  * #service 
