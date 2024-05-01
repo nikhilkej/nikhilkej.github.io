@@ -507,7 +507,7 @@ main {
 
 .about-text p { margin-bottom: 15px; }
 
-.typing-container { margin: 0 20px; }
+.about .typing-container { margin: 0 60px; }
 
 
 /**
@@ -1169,7 +1169,7 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-400);
   padding: 13px 20px;
-  border: 5px solid var(--jet);
+  border: 2px solid var(--jet);
   border-radius: 14px;
   outline: none;
 }
