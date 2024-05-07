@@ -131,6 +131,7 @@ li { list-style: none; }
 
 img, ion-icon, a, button, time, span { display: block; }
 
+
 button {
   font: inherit;
   background: none;
@@ -505,7 +506,6 @@ main {
 }
 
 .about-text p { margin-bottom: 15px; }
-
 
 
 /**
@@ -1122,6 +1122,16 @@ main {
   #CONTACT
 \*-----------------------------------*/
 
+.contact-text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+}
+
+.contact-text p { margin-bottom: 15px; }
+
+
 .mapbox {
   position: relative;
   height: 250px;
@@ -1157,10 +1167,11 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-400);
   padding: 13px 20px;
-  border: 1px solid var(--jet);
+  border: 2px solid var(--jet);
   border-radius: 14px;
   outline: none;
 }
+
 
 .form-input::placeholder { font-weight: var(--fw-500); }
 
@@ -1188,6 +1199,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   align-items: center;
   gap: 10px;
   padding: 13px 20px;
+  border: 2px solid var(--jet);
   border-radius: 14px;
   font-size: var(--fs-6);
   text-transform: capitalize;
