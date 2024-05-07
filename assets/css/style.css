@@ -976,7 +976,7 @@ main {
   border-radius: inherit;
 }
 
-.project-item > a:hover .project-img::before { background: hsla(0, 0%, 0%, 0.5); }
+.project-item > a:hover .project-img::before { background: var(--eerie-black-1); }
 
 .project-item-icon-box {
   --scale: 0.8;
