@@ -2,47 +2,59 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="X-UA-Compatible" content="text/html; charset=utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apar Garg</title>
-
-    <!--
-      - favicon
-    -->
     <link rel="icon" type="image/svg+xml" href="./assets/images/logo.svg">
-
-    <!--
-      - custom css link
-    -->
     <link rel="stylesheet" href="./assets/css/style.css">
-
-    <!--
-      - google font link
-    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXQLH66J4S"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-LXQLH66J4S');
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const filterButtons = document.querySelectorAll('.filter-item button');
+            const projectItems = document.querySelectorAll('.project-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const category = this.dataset.category;
+
+                    // Remove 'active' class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add 'active' class to the clicked button
+                    this.classList.add('active');
+
+                    // Show/hide project items based on category
+                    projectItems.forEach(item => {
+                        if (category === 'all') {
+                            item.style.display = 'block';
+                        } else {
+                            const itemCategory = item.dataset.category;
+                            if (itemCategory === category) {
+                                item.style.display = 'block';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+        });
     </script>
 </head>
 
 <body>
 
-    <!--
-      - #MAIN
-    -->
-
     <main>
 
         <!--
-          - ################################ SIDEBAR ###############################
+          - ############################### SIDEBAR ###############################
         -->
 
         <aside class="sidebar" data-sidebar>
@@ -165,17 +177,9 @@
 
         </aside>
 
-
-
-
-
-        <!--
-          - #main-content
-        -->
-
         <div class="main-content">
 
-            <!--
+             <!--
               - ################################ NAVBAR ###############################
             -->
 
@@ -184,7 +188,7 @@
                 <ul class="navbar-list">
 
                     <li class="navbar-item">
-                        <a href="index.html" class="navbar-link active">About</a>
+                        <a href="index.html" class="navbar-link">About</a>
                     </li>
 
                     <li class="navbar-item">
@@ -192,11 +196,11 @@
                     </li>
 
                     <li class="navbar-item">
-                        <a href="#" class="navbar-link">Project</a>
+                        <a href="project.html" class="navbar-link">Project</a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="blog.html" class="navbar-link">Blog</a>
+                        <a href="#" class="navbar-link active">Blog</a>
                     </li>
 
                     <li class="navbar-item">
@@ -207,156 +211,71 @@
 
             </nav>
 
-
-            <!--
-              - ################################ PROJECT ################################
-            -->
-
             <article class="blog active" data-page="blog">
-
                 <header>
-                  <h2 class="h2 article-title">Portfolio</h2>
+                    <h2 class="h2 article-title">Portfolio</h2>
                 </header>
-        
+
                 <section class="projects">
-                    <!--
-                    - section 1
-                    -->
+
                     <ul class="filter-list">
                         <li class="filter-item">
-                            <button class="active" data-filter-btn>All</button>
+                            <button class="active" data-category="all">All</button>
                         </li>
-        
                         <li class="filter-item">
-                            <button data-filter-btn>Web design</button>
+                            <button data-category="web design">Web Design</button>
                         </li>
-            
                         <li class="filter-item">
-                            <button data-filter-btn>Applications</button>
+                            <button data-category="applications">Applications</button>
                         </li>
-            
                         <li class="filter-item">
-                            <button data-filter-btn>Web development</button>
+                            <button data-category="web development">Web Development</button>
                         </li>
                     </ul>
-                    
-                    <!--
-                    - section 2
-                    -->
-                    <div class="filter-select-box">
-                        <button class="filter-select" data-select>
-                            
-                            <div class="select-value" data-selecct-value>Select category</div>
-            
-                            <div class="select-icon">
-                                <ion-icon name="chevron-down"></ion-icon>
-                            </div>
-        
-                        </button>
-        
-                        <ul class="select-list">
-                            <li class="select-item">
-                                <button data-select-item>All</button>
-                            </li>
-            
-                            <li class="select-item">
-                                <button data-select-item>Web design</button>
-                            </li>
-            
-                            <li class="select-item">
-                                <button data-select-item>Applications</button>
-                            </li>
-                
-                            <li class="select-item">
-                                <button data-select-item>Web development</button>
-                            </li>
-                        </ul>
-        
-                    </div>
 
-
-                    <!--
-                    - section 3
-                    -->
                     <ul class="project-list">
-        
-                        <li class="project-item  active" data-filter-item data-category="web development">
+
+                        <li class="project-item active" data-category="web development">
                             <a href="#">
-            
                                 <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-            
-                                    <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                                    <!-- Project image -->
                                 </figure>
-            
                                 <h3 class="project-title">Finance</h3>
-            
-                                <p class="project-category">Web development</p>
-            
+                                <p class="project-category">Web Development</p>
                             </a>
                         </li>
-        
-        
-                        <li class="project-item  active" data-filter-item data-category="web design">
+
+                        <li class="project-item active" data-category="web design">
                             <a href="#">
-            
                                 <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-            
-                                    <img src="./assets/images/project-1.jpg" alt="fundo" loading="lazy">
+                                    <!-- Project image -->
                                 </figure>
-            
                                 <h3 class="project-title">Fundo</h3>
-            
-                                <p class="project-category">Web design</p>
-            
+                                <p class="project-category">Web Design</p>
                             </a>
                         </li>
-        
-                        <li class="project-item  active" data-filter-item data-category="applications">
+
+                        <li class="project-item active" data-category="applications">
                             <a href="#">
-            
                                 <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-            
-                                    <img src="./assets/images/project-1.png" alt="brawlhalla" loading="lazy">
+                                    <!-- Project image -->
                                 </figure>
-            
                                 <h3 class="project-title">Brawlhalla</h3>
-            
                                 <p class="project-category">Applications</p>
-            
                             </a>
                         </li>
+
+                        <!-- Add more project items as needed -->
+
                     </ul>
-        
+
                 </section>
-        
+
             </article>
 
         </div>
 
     </main>
-
-
-
-
-    <!--
-      - custom js link
-    -->
-    <script src="./assets/js/script.js"></script>
-
-    <!--
-      - ionicon link
-    -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 
