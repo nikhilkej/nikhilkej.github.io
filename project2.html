@@ -1,10 +1,11 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta http-equiv="X-UA-Compatible" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apar Garg</title>
+    <title>Apar Garg - Blog</title>
 
     <!--
       - favicon
@@ -28,21 +29,48 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-LXQLH66J4S');
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const filterButtons = document.querySelectorAll('.filter-item button');
+            const projectItems = document.querySelectorAll('.project-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const category = this.dataset.category;
+
+                    // Remove 'active' class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add 'active' class to the clicked button
+                    this.classList.add('active');
+
+                    // Show/hide project items based on category
+                    projectItems.forEach(item => {
+                        if (category === 'all') {
+                            item.style.display = 'block';
+                        } else {
+                            const itemCategory = item.dataset.category;
+                            if (itemCategory === category) {
+                                item.style.display = 'block';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+        });
     </script>
 </head>
 
-<body>
 
-    <!--
-      - #MAIN
-    -->
+
+<body>
 
     <main>
 
         <!--
-          - ################################ SIDEBAR ###############################
+          - ############################### SIDEBAR ###############################
         -->
 
         <aside class="sidebar" data-sidebar>
@@ -165,14 +193,6 @@
 
         </aside>
 
-
-
-
-
-        <!--
-          - #main-content
-        -->
-
         <div class="main-content">
 
             <!--
@@ -184,7 +204,7 @@
                 <ul class="navbar-list">
 
                     <li class="navbar-item">
-                        <a href="index.html" class="navbar-link active">About</a>
+                        <a href="index.html" class="navbar-link">About</a>
                     </li>
 
                     <li class="navbar-item">
@@ -196,7 +216,7 @@
                     </li>
 
                     <li class="navbar-item">
-                        <a href="blog.html" class="navbar-link">Blog</a>
+                        <a href="blog.html" class="navbar-link active">Blog</a>
                     </li>
 
                     <li class="navbar-item">
@@ -207,73 +227,31 @@
 
             </nav>
 
-
             <!--
-              - ################################ PROJECT ################################
+                - ################################ PROJECT ################################
             -->
 
-            <article class="portfolio" data-page="portfolio">
-
+            <article class="blog active" data-page="project">
                 <header>
-                  <h2 class="h2 article-title">Portfolio</h2>
+                    <h2 class="h2 article-title">Project</h2>
                 </header>
-        
+
                 <section class="projects">
-                    <!--
-                    - section 1
-                    -->
+
                     <ul class="filter-list">
                         <li class="filter-item">
-                            <button class="active" data-filter-btn>All</button>
+                            <button class="active" data-category="all">All</button>
                         </li>
-        
                         <li class="filter-item">
-                            <button data-filter-btn>Web design</button>
+                            <button data-category="web design">Web Design</button>
                         </li>
-            
                         <li class="filter-item">
-                            <button data-filter-btn>Applications</button>
+                            <button data-category="applications">Applications</button>
                         </li>
-            
                         <li class="filter-item">
-                            <button data-filter-btn>Web development</button>
+                            <button data-category="web development">Web Development</button>
                         </li>
                     </ul>
-                    
-                    <!--
-                    - section 2
-                    -->
-                    <div class="filter-select-box">
-                        <button class="filter-select" data-select>
-                            
-                            <div class="select-value" data-selecct-value>Select category</div>
-            
-                            <div class="select-icon">
-                                <ion-icon name="chevron-down"></ion-icon>
-                            </div>
-        
-                        </button>
-        
-                        <ul class="select-list">
-                            <li class="select-item">
-                                <button data-select-item>All</button>
-                            </li>
-            
-                            <li class="select-item">
-                                <button data-select-item>Web design</button>
-                            </li>
-            
-                            <li class="select-item">
-                                <button data-select-item>Applications</button>
-                            </li>
-                
-                            <li class="select-item">
-                                <button data-select-item>Web development</button>
-                            </li>
-                        </ul>
-        
-                    </div>
-
 
                     <!--
                     - section 3
@@ -335,28 +313,14 @@
                             </a>
                         </li>
                     </ul>
-        
+
                 </section>
-        
+
             </article>
 
         </div>
 
     </main>
-
-
-
-
-    <!--
-      - custom js link
-    -->
-    <script src="./assets/js/script.js"></script>
-
-    <!--
-      - ionicon link
-    -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 
