@@ -249,27 +249,26 @@
                     <h2 class="h2 article-title">Resume</h2>
                 </header>
 
+                <ul class="filter-list">
+                    <li class="filter-item">
+                        <button class="active" data-category="all" disabled>All</button>
+                    </li>
+                    <li class="filter-item">
+                        <button class="active" data-category="computer vision">Computer Vision</button>
+                    </li>
+                    <li class="filter-item">
+                        <button data-category="nlp">NLP</button>
+                    </li>
+                    <li class="filter-item">
+                        <button data-category="other">Other</button>
+                    </li>
+                </ul>
+
+                <!--
+                - ############### Experience section ##################
+                -->
                 <section class="timeline">
 
-                    <ul class="filter-list">
-                        <li class="filter-item">
-                            <button class="active" data-category="all" disabled>All</button>
-                        </li>
-                        <li class="filter-item">
-                            <button class="active" data-category="computer vision">Computer Vision</button>
-                        </li>
-                        <li class="filter-item">
-                            <button data-category="nlp">NLP</button>
-                        </li>
-                        <li class="filter-item">
-                            <button data-category="other">Other</button>
-                        </li>
-                    </ul>
-
-                    <!--
-                    - ############### Experience section ##################
-                    -->
-                    
                     <div class="title-wrapper">
                         <div class="icon-box">
                             <ion-icon name="book-outline"></ion-icon>
@@ -409,16 +408,17 @@
                                 <p class="timeline-text">
                                     • Proposed a marketing solution that helps a pharma company target prescribers more strategically.<br />
                                     • Developed a Recommendation system using Contextual Bandit which helps in recommending the most suitable content to pitch to a prescriber, and the most suitable channel to pitch that content, based on their past behavioral attributes, considering various KPIs. This customized recommendation of content would increase customer engagement and in turn, the sales for the company.<br />
-                                    • Preprocessed and analyzed 4 pharma Big Data Sets namely Activity data, Sales data, Demographics data, and Multi-Channel Marketing (MCM) data.<br />
+                                    • Preprocessed and analyzed 4 pharma Big Data Sets namely Activity data, Sales data, Demographics data, and Multi-Channel Marketing (MCM) data.
                                 </p>
                             </li>
                         </ol>
                     </li>
+                </section>
 
-
-                    <!--
-                    - ############### Education section ##################
-                    -->
+                <!--
+                - ############### Education section ##################
+                -->
+                <section class="timeline">
 
                     <div class="title-wrapper">
                         <div class="icon-box">
@@ -456,6 +456,36 @@
                     </ol>
             
                 </section>
+
+                <!--
+                - ############### Skills section ##################
+                -->
+                <section class="skill">
+
+                    <div class="title-wrapper">
+                        <div class="icon-box">
+                            <ion-icon name="book-outline"></ion-icon>
+                        </div>
+
+                        <h3 class="h3">Skills</h3>
+                    </div>
+
+                    <ul class="skills-list content-card">
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">C#</h5>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 90%;"></div>
+                            </div>
+
+                        </li>
+                    </ul>
+                </section>
+
             </article>
 
         </div>
