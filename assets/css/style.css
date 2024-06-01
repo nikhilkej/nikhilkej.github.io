@@ -875,6 +875,9 @@ main {
   #PORTFOLIO
 \*-----------------------------------*/
 
+.hidden {
+  display: none;
+}
 
 .filter-list { display: none; }
 
