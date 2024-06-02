@@ -507,11 +507,6 @@ main {
 
 .about-text p { margin-bottom: 15px; }
 
-.about-text a {
-  color: inherit;
-  text-decoration: underline;
-}
-
 /**
  * #service 
  */
