@@ -249,6 +249,21 @@
                     <h2 class="h2 article-title">Resume</h2>
                 </header>
 
+                <ul class="filter-list">
+                    <li class="filter-item">
+                        <button class="active" data-category="all">All</button>
+                    </li>
+                    <li class="filter-item">
+                        <button data-category="computer vision">Computer Vision</button>
+                    </li>
+                    <li class="filter-item">
+                        <button data-category="nlp">NLP</button>
+                    </li>
+                    <li class="filter-item">
+                        <button data-category="other">Other</button>
+                    </li>
+                </ul>
+
                 <!--
                 - ############### Experience section ##################
                 -->
@@ -262,95 +277,142 @@
                         <h3 class="h3">Experience</h3>
                     </div>
 
-                    
-                    <ol class="timeline-list">
-                    
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Data Scientist <a href="https://rea-global.com" target="_blank">Real Estate Analytics</a></h4>
+                    <!--
+                    - ########### computer vision ###########
+                    -->
 
-                            <span>May 2022 - Present</span>
+                    <li class="project-item  active" data-filter-item data-category="computer vision">
+                        <ol class="timeline-list">
+                        
+                            <li class="timeline-item">
+                                <h4 class="h4 timeline-item-title">Data Scientist <a href="https://rea-global.com" target="_blank">Real Estate Analytics</a></h4>
 
-                            <p class="timeline-text"> 
-                                Responsible for actively contributing to a team that develops cutting-edge AI solutions in real estate. I am deeply involved in every stage of the project lifecycle, from conceptualization to deployment and maintenance.
-                                <br />
-                                • Developed a predictive system for in-launch and new-launch real estate projects that estimates the number of housing units likely to sell in the next quarter based on the listing price and other features.<br />
-                                • Made a system that generates compelling property descriptions for real estate listings using room images, targeting real estate agents.<br />
-                                • Built an assessment system for Singapore condo and apartment projects that uses exterior images of the buildings, along with property type, tenure, and region to determine project quality.<br />
-                                • Created a system that estimates the age of a Singapore landed property by analyzing its exterior images, classifying them into four age categories: before 1970, 1970-1990, 1990-2000, or after 2000.<br />
-                                • Proposed a duplicate listing detection system for condo and apartment projects, which compares listing images and features like date, property type, area, and price to identify and flag duplicate listings.<br />
-                                • Created an aggregator system that collects, deduplicates, ranks, and summarizes real estate news articles from diverse sources every day to produce a concise daily news summary report.<br />
-                                • Developed a system that recommends relevant projects to home buyers/renters in Singapore according to their budget, location, and other requirements.<br />
-                                • Engineered a system that identifies named entities such as unit no., street name, and city area in Singapore and Malaysia addresses.<br />
-                                • Developed a review analysis system that examines syntactical relations between words to extract entities, aspects, and opinions from apartment and condo project reviews.
-                            </p>
-                        </li>
+                                <span>May 2022 - Present</span>
 
-                        <li class="timeline-item">
-        
-                            <h4 class="h4 timeline-item-title">Research And Development Intern <a href="https://www.a-star.edu.sg/i2r" target="_blank">Institute for Infocomm Research (A*STAR)</a></h4>
+                                <p class="timeline-text"> 
+                                    Responsible for actively contributing to a team that develops cutting-edge AI solutions in real estate. I am deeply involved in every stage of the project lifecycle, from conceptualization to deployment and maintenance.
+                                    <br />
+                                    • Made a system that generates compelling property descriptions for real estate listings using room images, targeting real estate agents.<br />
+                                    • Built an assessment system for Singapore condo and apartment projects that uses exterior images of the buildings, along with property type, tenure, and region to determine project quality.<br />
+                                    • Created a system that estimates the age of a Singapore landed property by analyzing its exterior images, classifying them into four age categories: before 1970, 1970-1990, 1990-2000, or after 2000.<br />
+                                    • Proposed a duplicate listing detection system for condo and apartment projects, which compares listing images and features like date, property type, area, and price to identify and flag duplicate listings.<br />
+                                </p>
+                            </li>
 
-                            <span>Feb 2022 - Apr 2022</span>
+                            <li class="timeline-item">
+                                <h4 class="h4 timeline-item-title">Deep Learning Researcher <a href="https://leadingindia.ai" target="_blank">leadingindia.ai</a></h4>
 
-                            <p class="timeline-text"> 
-                                • Engineered an intrusion detection system using AI which can accurately detect and classify various types of attacks (e.g. Brute Force, DoS, DDoS, and Web Attack, etc.) in a network.<br /> 
-                                • Investigated self-supervised learning methods to learn better representations for features in data and as a means to deal with the phenomenon of class imbalance.
-                            </p>
-                        </li>
+                                <span>Nov 2019 - Dec 2019</span>
 
-                        <li class="timeline-item">
+                                <p class="timeline-text"> 
+                                    • Implemented an AI system to detect suspicious activities on the streets of India with the help of drones.<br />
+                                    • The model classifies activities as violent or non-violent. Considered 8 activities as violent (e.g. kick, punch, and strangle) and 6 activities as non-violent (e.g. walk, wave and fall).<br />
+                                    • Constructed a custom dataset composed of video sequences of a total of 610 seconds having video resolution of 1080p at 60 fps using DJI Mavic Pro drone. Each frame contained 1 to 10 humans engaged in various violent and non-violent activities.<br />
+                                    • Used Mobilenet SSD and SORT models to detect and track humans in the video. Applied milestone models namely, Early Fusion 2D-CNN, Late Fusion 2D-CNN, and LRCN on the detected humans to recognize the activity.<br />
+                                    • Achievements: Produced a novel multi-person and multi-activity dataset that can be leveraged for research purposes.<br />
+                                </p>
+                            </li>
+                        </ol>
+                    </li>
 
-                            <h4 class="h4 timeline-item-title">Data Science Intern <a href="https://dcubeanalytics.com" target="_blank">D Cube Analytics</a></h4>
+                    <!--
+                    - ########### NLP ###########
+                    -->
 
-                            <span>Dec 2020 - Apr 2021</span>
+                    <li class="project-item" data-filter-item data-category="nlp">
+                        <ol class="timeline-list">
+                        
+                            <li class="timeline-item">
+                                <h4 class="h4 timeline-item-title">Data Scientist <a href="https://rea-global.com" target="_blank">Real Estate Analytics</a></h4>
 
-                            <p class="timeline-text"> 
-                                • Pre-Launch Analytics.<br />
-                                • Scrutinized the current scenario of competitor drugs in the severe asthma market to help a Bio-Pharma company prepare for a successful launch of a Biologic product.<br />
-                                • Performed Descriptive and Predictive Analysis on IQVIA LAAD data.
-                            </p>
-                        </li>
+                                <span>May 2022 - Present</span>
 
-                        <li class="timeline-item">
+                                <p class="timeline-text"> 
+                                    Responsible for actively contributing to a team that develops cutting-edge AI solutions in real estate. I am deeply involved in every stage of the project lifecycle, from conceptualization to deployment and maintenance.
+                                    <br />
+                                    • Created an aggregator system that collects, deduplicates, ranks, and summarizes real estate news articles from diverse sources every day to produce a concise daily news summary report.<br />
+                                    • Developed a system that recommends relevant projects to home buyers/renters in Singapore according to their budget, location, and other requirements.<br />
+                                    • Engineered a system that identifies named entities such as unit no., street name, and city area in Singapore and Malaysia addresses.<br />
+                                    • Developed a review analysis system that examines syntactical relations between words to extract entities, aspects, and opinions from apartment and condo project reviews.
+                                </p>
+                            </li>
+                        </ol>
+                    </li>
 
-                            <h4 class="h4 timeline-item-title">Data Science Intern <a href="https://www.biosectrx.com" target="_blank">BiosectRx</a></h4>
 
-                            <span>May 2020 - Jul 2020</span>
+                    <!--
+                    - ########### Other ###########
+                    -->
 
-                            <p class="timeline-text">
-                                • Wrote a script that could automatically mine and examine clinical trials, patents, and news articles for any given company from 6 public and government websites.<br />
-                                • Worked closely with the Co-Founder to explore ways to leverage ML for generating recommendations for potential investment opportunities in life sciences.<br />
-                                • Achievements: Saved the company 3-4 hrs/day.
-                            </p>
-                        </li>
+                    <li class="project-item" data-filter-item data-category="other">
+                        <ol class="timeline-list">
+                        
+                            <li class="timeline-item">
+            
+                                <h4 class="h4 timeline-item-title">Data Scientist <a href="https://rea-global.com" target="_blank">Real Estate Analytics</a></h4>
+    
+                                <span>May 2022 - Present</span>
+    
+                                <p class="timeline-text"> 
+                                    Responsible for actively contributing to a team that develops cutting-edge AI solutions in real estate. I am deeply involved in every stage of the project lifecycle, from conceptualization to deployment and maintenance.
+                                    <br />
+                                    • Developed a predictive system for in-launch and new-launch real estate projects that estimates the number of housing units likely to sell in the next quarter based on the listing price and other features.
+                                </p>
+    
+                            </li>
 
-                        <li class="timeline-item">
+                            <li class="timeline-item">
+            
+                                <h4 class="h4 timeline-item-title">Research And Development Intern <a href="https://www.a-star.edu.sg/i2r" target="_blank">Institute for Infocomm Research (A*STAR)</a></h4>
+    
+                                <span>Feb 2022 - Apr 2022</span>
+    
+                                <p class="timeline-text"> 
+                                    • Engineered an intrusion detection system using AI which can accurately detect and classify various types of attacks (e.g. Brute Force, DoS, DDoS, and Web Attack, etc.) in a network.<br /> 
+                                    • Investigated self-supervised learning methods to learn better representations for features in data and as a means to deal with the phenomenon of class imbalance.
+                                </p>
+                            </li>
 
-                            <h4 class="h4 timeline-item-title">Data Science Intern <a href="https://dcubeanalytics.com" target="_blank">D Cube Analytics</a></h4>
+                            <li class="timeline-item">
+    
+                                <h4 class="h4 timeline-item-title">Data Science Intern <a href="https://dcubeanalytics.com" target="_blank">D Cube Analytics</a></h4>
+    
+                                <span>Dec 2020 - Apr 2021</span>
+    
+                                <p class="timeline-text"> 
+                                    • Pre-Launch Analytics.<br />
+                                    • Scrutinized the current scenario of competitor drugs in the severe asthma market to help a Bio-Pharma company prepare for a successful launch of a Biologic product.<br />
+                                    • Performed Descriptive and Predictive Analysis on IQVIA LAAD data.
+                                </p>
+                            </li>
 
-                            <span>May 2020 - Jul 2020</span>
+                            <li class="timeline-item">
+    
+                                <h4 class="h4 timeline-item-title">Data Science Intern <a href="https://www.biosectrx.com" target="_blank">BiosectRx</a></h4>
+    
+                                <span>May 2020 - Jul 2020</span>
+    
+                                <p class="timeline-text">
+                                    • Wrote a script that could automatically mine and examine clinical trials, patents, and news articles for any given company from 6 public and government websites.<br />
+                                    • Worked closely with the Co-Founder to explore ways to leverage ML for generating recommendations for potential investment opportunities in life sciences.<br />
+                                    • Achievements: Saved the company 3-4 hrs/day.
+                                </p>
+                            </li>
 
-                            <p class="timeline-text">
-                                • Proposed a marketing solution that helps a pharma company target prescribers more strategically.<br />
-                                • Developed a Recommendation system using Contextual Bandit which helps in recommending the most suitable content to pitch to a prescriber, and the most suitable channel to pitch that content, based on their past behavioral attributes, considering various KPIs. This customized recommendation of content would increase customer engagement and in turn, the sales for the company.<br />
-                                • Preprocessed and analyzed 4 pharma Big Data Sets namely Activity data, Sales data, Demographics data, and Multi-Channel Marketing (MCM) data.
-                            </p>
-                        </li>
-
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Deep Learning Researcher <a href="https://leadingindia.ai" target="_blank">leadingindia.ai</a></h4>
-
-                            <span>Nov 2019 - Dec 2019</span>
-
-                            <p class="timeline-text"> 
-                                • Implemented an AI system to detect suspicious activities on the streets of India with the help of drones.<br />
-                                • The model classifies activities as violent or non-violent. Considered 8 activities as violent (e.g. kick, punch, and strangle) and 6 activities as non-violent (e.g. walk, wave and fall).<br />
-                                • Constructed a custom dataset composed of video sequences of a total of 610 seconds having video resolution of 1080p at 60 fps using DJI Mavic Pro drone. Each frame contained 1 to 10 humans engaged in various violent and non-violent activities.<br />
-                                • Used Mobilenet SSD and SORT models to detect and track humans in the video. Applied milestone models namely, Early Fusion 2D-CNN, Late Fusion 2D-CNN, and LRCN on the detected humans to recognize the activity.<br />
-                                • Achievements: Produced a novel multi-person and multi-activity dataset that can be leveraged for research purposes.<br />
-                            </p>
-                        </li>
-                    </ol>
-                   
+                            <li class="timeline-item">
+    
+                                <h4 class="h4 timeline-item-title">Data Science Intern <a href="https://dcubeanalytics.com" target="_blank">D Cube Analytics</a></h4>
+    
+                                <span>May 2020 - Jul 2020</span>
+    
+                                <p class="timeline-text">
+                                    • Proposed a marketing solution that helps a pharma company target prescribers more strategically.<br />
+                                    • Developed a Recommendation system using Contextual Bandit which helps in recommending the most suitable content to pitch to a prescriber, and the most suitable channel to pitch that content, based on their past behavioral attributes, considering various KPIs. This customized recommendation of content would increase customer engagement and in turn, the sales for the company.<br />
+                                    • Preprocessed and analyzed 4 pharma Big Data Sets namely Activity data, Sales data, Demographics data, and Multi-Channel Marketing (MCM) data.
+                                </p>
+                            </li>
+                        </ol>
+                    </li>
                 </section>
 
                 <!--
