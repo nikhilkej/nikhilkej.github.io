@@ -841,45 +841,56 @@ main {
 }
 
 
+/*-----------------------------------*\
+  #RESUME
+\*-----------------------------------*/
+
+.article-title { margin-bottom: 30px; }
+
+
 /**
- * skills 
+ * education and experience 
  */
 
-.skills-title { margin-bottom: 20px; }
-
-.skills-list { padding: 20px; }
-
-
-.skills-item:not(:last-child) { margin-bottom: 15px; }
+.skill { margin-bottom: 30px; }
 
 .skill .title-wrapper {
   display: flex;
   align-items: center;
-  gap: 5px;
-  margin-bottom: 8px;
+  gap: 15px;
+  margin-bottom: 25px;
 }
 
-.skill .title-wrapper data {
-  color: var(--light-gray);
-  font-size: var(--fs-7);
-  font-weight: var(--fw-300);
+.skill-list {
+  font-size: var(--fs-6);
+  margin-left: 45px;
 }
 
-.skill-progress-bg {
-  background: var(--jet);
-  width: 100%;
-  height: 8px;
-  border-radius: 10px;
+.skill-item { position: relative; }
+
+.skill-item-title {
+  font-size: var(--fs-6);
+  line-height: 1.3;
+  margin-bottom: 7px;
 }
 
-.skill-progress-fill {
+.skill-item::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -33px;
+  height: 6px;
+  width: 6px;
   background: var(--text-gradient-yellow);
-  height: 100%;
-  border-radius: inherit;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px var(--jet);
 }
 
-
-
+.skill-text {
+  color: var(--light-gray);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+}
 
 
 /*-----------------------------------*\
