@@ -507,9 +507,9 @@ main {
 
 .about-text p { margin-bottom: 15px; }
 
-.about a {
-  color: var(--light-gray);
-  text-decoration: underline
+.about-text a {
+  color: inherit;
+  text-decoration: underline;
 }
 
 /**
