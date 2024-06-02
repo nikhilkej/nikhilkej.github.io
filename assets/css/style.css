@@ -812,6 +812,8 @@ main {
   line-height: 1.6;
 }
 
+/* Removed the following rule to eliminate the connecting line */
+/*
 .timeline-item:not(:last-child)::before {
   content: "";
   position: absolute;
@@ -821,7 +823,7 @@ main {
   height: calc(100% + 50px);
   background: var(--jet);
 }
-
+*/
 .timeline-item::after {
   content: "";
   position: absolute;
