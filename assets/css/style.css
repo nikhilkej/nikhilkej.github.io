@@ -800,8 +800,8 @@ main {
   line-height: 1.6;
 }
 
-.timeline-list a:hover {
-  font-weight: var(--fw-700); /* Make it bold on hover */
+.hover-bold:hover {
+  font-weight: bold;
 }
 
 
