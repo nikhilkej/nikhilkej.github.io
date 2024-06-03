@@ -801,7 +801,7 @@ main {
 }
 
 .hover-bold:hover {
-  font-weight: bold;
+  font-weight: var(--fw-700);
 }
 
 
