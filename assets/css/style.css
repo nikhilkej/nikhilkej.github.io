@@ -794,13 +794,7 @@ main {
   margin-bottom: 7px;
 }
 
-.timeline-list a {
-  color: var(--vegas-gold);
-  font-weight: var(--fw-400);
-  line-height: 1.6;
-}
-
-.hover-bold:hover {
+.timeline-item .hover-bold:hover {
   font-weight: var(--fw-700);
 }
 
