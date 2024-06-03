@@ -4,5 +4,7 @@
 * Built using HTML, CSS, and JavaScript
 
 # References
-* https://github.com/codewithsadee/vcard-personal-portfolio
-* https://github.com/yildizseli/yildizseli.github.io
+* Template - https://github.com/codewithsadee/vcard-personal-portfolio
+* Template - https://github.com/yildizseli/yildizseli.github.io
+* Sample website - https://jnolis.com
+* Sample website -https://www.shawhintalebi.com
